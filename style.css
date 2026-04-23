@@ -719,8 +719,7 @@ footer p {
 
     .about-photo,
     .about-photo-placeholder {
-        max-width: 240px;
-        aspect-ratio: 3/4;
+        max-width: 200px;
     }
 
     .project-grid {
