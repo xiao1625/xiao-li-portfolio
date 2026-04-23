@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Xiao Li</title>
+    <meta name="description" content="Privacy Policy for xiaoli.art — how visitor data is collected and used.">
+    <meta name="author" content="Xiao Li">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KFL3HFQSGD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KFL3HFQSGD');
+    </script>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-content">
+            <h2>Xiao Li</h2>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="statement.html">Statement</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">◐ Dark</button>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container" style="max-width: 760px;">
+            <h6>Legal</h6>
+            <h1>Privacy Policy</h1>
+            <p><em>Last updated: April 2026</em></p>
+            <br>
+
+            <h4>Information Collected</h4>
+            <p>This website uses <strong>Google Analytics 4</strong> to collect anonymized data about site visitors, including pages visited, time on site, and approximate geographic location. No personally identifiable information is collected without your consent.</p>
+
+            <h4>Contact Form</h4>
+            <p>When you submit the contact form, your name, email, and message are transmitted via <strong>Formspree</strong> to the site owner. This information is used solely to respond to your inquiry.</p>
+
+            <h4>Third-Party Services</h4>
+            <ul>
+                <li><strong>Google Analytics</strong> — anonymized visitor tracking</li>
+                <li><strong>Formspree</strong> — secure form submission</li>
+                <li><strong>Google Fonts</strong> — typography loading</li>
+                <li><strong>YouTube</strong> — embedded video player</li>
+            </ul>
+
+            <h4>Your Rights</h4>
+            <p>You may opt out of Google Analytics tracking by using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>.</p>
+
+            <h4>Contact</h4>
+            <p>For privacy questions, email <a href="mailto:ulixiao@live.com">ulixiao@live.com</a>.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>Copyright &copy; 2026 Xiao Li | Los Angeles</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('darkToggle');
+        const body = document.body;
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            toggle.textContent = '◑ Light';
+        }
+        toggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            toggle.textContent = isDark ? '◑ Light' : '◐ Dark';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    </script>
+
+</body>
+</html>

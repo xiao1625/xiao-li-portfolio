@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Xiao Li</title>
+    <meta name="description" content="Learn about Xiao Li, an interdisciplinary artist working with installation and audiovisual practices, pursuing an MFA at CalArts.">
+    <meta name="keywords" content="Xiao Li, about, interdisciplinary artist, CalArts, MFA, Music Technology">
+    <meta name="author" content="Xiao Li">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KFL3HFQSGD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KFL3HFQSGD');
+    </script>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-content">
+            <h2>Xiao Li</h2>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="statement.html">Statement</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">◐ Dark</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="about">
+        <div class="container">
+            <div class="about-grid">
+
+                <!-- Photo column -->
+                <div>
+                    <img
+                        class="about-photo"
+                        src="https://drive.google.com/thumbnail?id=1TjnTC2RKs6RbdvmkSmgfnWW2bKtLMFZl&sz=w800"
+                        alt="Portrait of Xiao Li, interdisciplinary artist based in Los Angeles">
+                </div>
+
+                <!-- Text column -->
+                <div class="about-text">
+                    <h1>Xiao Li</h1>
+                    <h2>Interdisciplinary Artist</h2>
+
+                    <p>
+                        <strong>Xiao</strong> is an interdisciplinary artist working primarily with installation and audiovisual practices. The work engages multiple senses and unfolds through time and space, centering on lived experience, perception, and presence.
+                    </p>
+
+                    <p>
+                        With a background in music, engineering, and digital product design, Xiao is currently pursuing an MFA in Music Technology at <em>CalArts</em> and writing a book on universal philosophy inspired by Laozi and the concept of yin-yang.
+                    </p>
+
+                    <p>Based in Los Angeles, California.</p>
+
+                    <h4>Tools &amp; Technologies</h4>
+                    <p>TouchDesigner &nbsp;·&nbsp; Max/MSP &nbsp;·&nbsp; Ableton Live &nbsp;·&nbsp; Python</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>Copyright &copy; 2026 Xiao Li | Los Angeles</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('darkToggle');
+        const body = document.body;
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            toggle.textContent = '◑ Light';
+        }
+        toggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            toggle.textContent = isDark ? '◑ Light' : '◐ Dark';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use | Xiao Li</title>
+    <meta name="description" content="Terms of Use for xiaoli.art — usage rights and content ownership.">
+    <meta name="author" content="Xiao Li">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KFL3HFQSGD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KFL3HFQSGD');
+    </script>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-content">
+            <h2>Xiao Li</h2>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="statement.html">Statement</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">◐ Dark</button>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container" style="max-width: 760px;">
+            <h6>Legal</h6>
+            <h1>Terms of Use</h1>
+            <p><em>Last updated: April 2026</em></p>
+            <br>
+
+            <h4>Content Ownership</h4>
+            <p>All artwork, text, videos, and images on this website are the <strong>intellectual property of Xiao Li</strong> unless otherwise stated. Reproduction or distribution without written permission is prohibited.</p>
+
+            <h4>Permitted Use</h4>
+            <ul>
+                <li>Viewing and sharing links to this website for personal, educational, or editorial purposes</li>
+                <li>Embedding or referencing work with proper attribution</li>
+            </ul>
+
+            <h4>Prohibited Use</h4>
+            <ul>
+                <li>Reproducing or selling artwork without permission</li>
+                <li>Using content for commercial purposes without a licensing agreement</li>
+                <li>Misrepresenting the work or its creator</li>
+            </ul>
+
+            <h4>Licensing &amp; Commissions</h4>
+            <p>For licensing inquiries, commissions, or exhibition requests, please <a href="contact.html">contact Xiao Li directly</a>.</p>
+
+            <h4>Disclaimer</h4>
+            <p>This website is provided in good faith. Xiao Li is not liable for any inaccuracies or technical issues that may arise during use.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>Copyright &copy; 2026 Xiao Li | Los Angeles</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('darkToggle');
+        const body = document.body;
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            toggle.textContent = '◑ Light';
+        }
+        toggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            toggle.textContent = isDark ? '◑ Light' : '◐ Dark';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    </script>
+
+</body>
+</html>

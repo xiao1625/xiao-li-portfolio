@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Statement | Xiao Li</title>
+    <meta name="description" content="Xiao Li's artist statement — exploring perception, presence, and shared environments through installation and audiovisual art.">
+    <meta name="keywords" content="Xiao Li, artist statement, installation art, audiovisual, perception, presence">
+    <meta name="author" content="Xiao Li">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KFL3HFQSGD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KFL3HFQSGD');
+    </script>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-content">
+            <h2>Xiao Li</h2>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="statement.html" class="active">Statement</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">◐ Dark</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="statement">
+        <div class="container">
+            <div class="statement-inner">
+
+                <h1>Artist Statement</h1>
+                <br>
+
+                <blockquote>
+                    "What appears belongs to the moment of sensing itself — to the body present, and to the way one feels the world."
+                </blockquote>
+
+                <p>My work begins from the understanding that experience is inseparable from the position of the one who encounters it. Time and space carry different meanings, shaped by where one stands, how one moves, and what one senses.</p>
+
+                <p>Working with installation and audiovisual forms, I create works that exist as shared environments emerging through perspective. What is encountered shifts with position, duration, and presence, forming different relationships as one moves through the work.</p>
+
+                <p>I am interested in how each encounter gives rise to a reflected experience. What appears belongs to the moment of sensing itself, to the body present, and to the way one feels the world.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>Copyright &copy; 2026 Xiao Li | Los Angeles</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('darkToggle');
+        const body = document.body;
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            toggle.textContent = '◑ Light';
+        }
+        toggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            toggle.textContent = isDark ? '◑ Light' : '◐ Dark';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    </script>
+
+</body>
+</html>

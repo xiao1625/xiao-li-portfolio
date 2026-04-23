@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Xiao Li</title>
+    <meta name="description" content="Featured TouchDesigner projects by Xiao Li — generative audiovisual works including Nothing is Fixed and Repetitive Flow.">
+    <meta name="keywords" content="Xiao Li, projects, TouchDesigner, generative art, audiovisual, Nothing is Fixed, Repetitive Flow">
+    <meta name="author" content="Xiao Li">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KFL3HFQSGD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KFL3HFQSGD');
+    </script>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-content">
+            <h2>Xiao Li</h2>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="statement.html">Statement</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="contact.html">Contact</a>
+                <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">◐ Dark</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="projects">
+        <div class="container">
+
+            <h6>Selected Works</h6>
+            <h1>Featured TouchDesigner Projects</h1>
+            <h5>Real-time Generative Audiovisual Art</h5>
+
+            <div class="project-grid">
+
+                <!-- Project 1: YouTube thumbnail linking to video -->
+                <div class="project-card">
+                    <div class="card-img-wrapper">
+                        <img
+                            src="https://drive.google.com/thumbnail?id=1fP7wlNMUZPKExPYoVHB9xqXPSzUnQP4j&sz=w1000"
+                            alt="Nothing is Fixed — generative audiovisual work by Xiao Li"
+                            loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <h6>2025 · TouchDesigner</h6>
+                        <h3>Nothing is Fixed</h3>
+                        <p>Real-time generative audiovisual exploration engaging <em>light, motion, and presence</em>. The work shifts continuously in response to sound input, making each viewing a unique encounter.</p>
+                        <a href="https://www.youtube.com/watch?v=jK-1izf1QZI" target="_blank" rel="noopener noreferrer" class="btn">Watch on YouTube</a>
+                    </div>
+                </div>
+
+                <!-- Project 2: thumbnail + Instagram link -->
+                <div class="project-card">
+                    <div class="card-img-wrapper">
+                        <img      
+                            src="https://drive.google.com/thumbnail?id=1gdWSm7ab3ztj2maJBDJ_ZsioXgqmB768&sz=w1000"
+                            alt="Repetitive Flow — abstract generative visual study by Xiao Li with dynamic light effects"
+                            loading="lazy">
+                    </div>
+                    <div class="project-card-body">
+                        <h6>2025 · TouchDesigner</h6>
+                        <h3>Repetitive Flow</h3>
+                        <p>Interactive generative visual study with <em>dynamic light effects</em> and abstract forms. The piece investigates how repetition and variation coexist within a single algorithmic system.</p>
+                        <a href="https://www.instagram.com/p/DWK3rPriBgc/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on Instagram</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Additional context with required heading levels and list -->
+            <br><br>
+            <h4>About the Practice</h4>
+            <p>These works are created using <strong>TouchDesigner</strong>, a node-based visual programming environment for real-time interactive media. Key techniques include:</p>
+            <ul>
+                <li><strong>Feedback loops</strong> — visual systems that respond to and modify their own output</li>
+                <li><strong>Audio-reactive parameters</strong> — sound analysis driving visual transformations in real time</li>
+                <li><strong>Particle systems</strong> — thousands of points moving according to physics-based rules</li>
+                <li><strong>GLSL shaders</strong> — custom GPU programs for rendering complex visual effects</li>
+            </ul>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>Copyright &copy; 2026 Xiao Li | Los Angeles</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('darkToggle');
+        const body = document.body;
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            toggle.textContent = '◑ Light';
+        }
+        toggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            toggle.textContent = isDark ? '◑ Light' : '◐ Dark';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    </script>
+
+</body>
+</html>
