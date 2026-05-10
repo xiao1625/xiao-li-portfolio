@@ -6,6 +6,6 @@ My personal artist website.
 https://xiao1625.github.io/xiao-li-portfolio/
 
 ## Course Work
-C++ final: https://github.com/xiao1625/Smoke-Control-05082026
+C++ final: https://github.com/xiao1625/05082026_Smoke_Control
 
 C++ mideterm: https://github.com/xiao1625/03242026_Midterm
